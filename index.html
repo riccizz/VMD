@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VMD</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { scale: 1.2 }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Variational Masked Diffusion Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span> -->
+              <span class="author-block">
+                      Yichi Zhang,
+                  </span>
+                  <span class="author-block">
+                      Alex Schwing,
+                  </span>
+                  <span class="author-block">
+                      Zhizhen Zhao
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of Illinois Urbana-Champaign
+                      <!-- <br>ICLR 2025 -->
+                    </span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://openreview.net/forum?id=6F6qwdycgJ" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/riccizz/VMD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2507.13350" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+<div class="columns is-centered results-container">
+  <div class="column is-half">
+    <img src="static/images/overview/mask_latent_training.png" alt="First Image">
+    <h2 class="subtitle has-text-centered">
+      Training
+    </h2>
+  </div>
+  <div class="column is-half">
+    <img src="static/images/overview/mask_latent_sampling.png" alt="Second Image">
+    <h2 class="subtitle has-text-centered">
+      Sampling
+    </h2>
+  </div>
+</div>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Masked diffusion models have recently emerged as a flexible framework for discrete generative modeling. However, a key limitation of standard masked diffusion is its inability to effectively capture dependencies among tokens that are predicted concurrently, leading to degraded generation quality when dependencies among tokens are important. To explicitly model dependencies among tokens, we propose Variational Masked Diffusion (VMD), a framework that introduces latent variables into the masked diffusion process. Through controlled experiments on synthetic datasets, we demonstrate that VMD successfully learns dependencies that conventional masked diffusion fails to capture. We further validate the effectiveness of our approach on Sudoku puzzles and text datasets, where learning of dependencies among tokens improves global consistency. Across these domains, VMD enhances both generation quality and dependency awareness, highlighting the value of integrating variational inference into masked diffusion. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- 2 token exp -->
+<div class="columns is-centered results-container">
+  <div class="column is-full">
+    <img src="static/images/Deterministic.png" alt="Third Image">
+  </div>
+</div>
+<div class="columns is-centered results-container">
+  <div class="column is-full">
+    <img src="static/images/NonUniform.png" alt="Third Image">
+  </div>
+</div>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            The above figure shows examples with controlled synthetic data with 2 tokens. In the first row, we consider 10 two-token sequences: $\{(k, k+1 \mod 10) \}_{k = 0}^9$ and the data distribution is uniform on the support. In the second row, we consider a non-uniform distribution over the support, with $P((k, k+1 \mod 10)) = \frac{k+1}{55}$ for $k\! \in\!\{ 0,...,9\}$. In both settings, we see that standard masked diffusion fails to capture the dependency when decoding concurrently (one-step inference): when generating both tokens simultaneously, it degenerates to random guessing yielding around 10\% accuracy. In contrast, VMD is able to capture and generate correct pairs reliably. 
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="width:48%; margin:auto;">
+<table style="width:100%; border-collapse:collapse; text-align:center; font-family:'Inter', sans-serif; font-size:14px;">
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th rowspan="2">Method</th>
+      <th colspan="4">D1</th>
+      <th colspan="4">D2</th>
+    </tr>
+    <tr>
+      <th>B=2<br>NFE=4</th>
+      <th>B=2<br>NFE=2</th>
+      <th>B=1<br>NFE=4</th>
+      <th>B=1<br>NFE=1</th>
+      <th>B=2<br>NFE=4</th>
+      <th>B=2<br>NFE=2</th>
+      <th>B=1<br>NFE=4</th>
+      <th>B=1<br>NFE=1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2"><b>Acc. (↑)</b></td>
+      <td>Block MDM</td>
+      <td>99.4%</td>
+      <td>10.1%</td>
+      <td>99.3%</td>
+      <td>0.1%</td>
+      <td>99.3%</td>
+      <td>1.1%</td>
+      <td>99.1%</td>
+      <td>1.1%</td>
+    </tr>
+    <tr>
+      <td><b>VMD (ours)</b></td>
+      <td><b>100%</b></td>
+      <td><b>94.2%</b></td>
+      <td><b>100%</b></td>
+      <td><b>87.3%</b></td>
+      <td><b>100%</b></td>
+      <td><b>88.6%</b></td>
+      <td><b>100%</b></td>
+      <td><b>80.0%</b></td>
+    </tr>
+    <tr style="height:10px;"></tr> <!-- spacing row -->
+    <tr>
+      <td rowspan="2"><b>KL (↓)</b></td>
+      <td>Block MDM</td>
+      <td><b>0.007</b></td>
+      <td>2.298</td>
+      <td><b>0.010</b></td>
+      <td>9.422</td>
+      <td><b>0.018</b></td>
+      <td>7.656</td>
+      <td><b>0.015</b></td>
+      <td>7.493</td>
+    </tr>
+    <tr>
+      <td><b>VMD (ours)</b></td>
+      <td>0.012</td>
+      <td><b>0.068</b></td>
+      <td>0.033</td>
+      <td><b>0.165</b></td>
+      <td><b>0.018</b></td>
+      <td><b>0.148</b></td>
+      <td>0.475</td>
+      <td><b>0.268</b></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Then we have examples with controlled synthetic data with 4 tokens. The first dataset (D1) contains 10 unique sequences: $\{(k, k+1, k+2, k+3 \mod 10) \}_{k = 0}^9$, which have strong token dependence. The second dataset (D2) is  $\{(k, k+1, l, l+1 \mod 10) \}_{k, l = 0}^9$. When decoding one token at a time, both block diffusion and our variational formulation reach nearly 100% accuracy. However, when decoding tokens in parallel, the baseline collapses to random guessing, failing to capture inter-token dependencies. In contrast, our variational formulation maintains coherent generation and significantly outperforms the baseline across all configurations, demonstrating robust modeling of joint token dynamics even under one-step inference. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="width:50%; margin:auto; overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; text-align:center; font-family:'Inter', sans-serif; font-size:14px;">
+  <thead>
+    <tr>
+      <th rowspan="1">Sudoku Exp</th>
+      <th colspan="3">Top prob (Accuracy ↑)</th>
+      <th colspan="3">Top prob margin (Accuracy ↑)</th>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <th>NFE=5</th>
+      <th>NFE=10</th>
+      <th>NFE=20</th>
+      <th>NFE=5</th>
+      <th>NFE=10</th>
+      <th>NFE=20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>10.6%</td>
+      <td>14.7%</td>
+      <td>20.4%</td>
+      <td>36.2%</td>
+      <td>78.4%</td>
+      <td>91.1%</td>
+    </tr>
+    <tr>
+      <td><b>VMD</b></td>
+      <td><b>67.7%</b></td>
+      <td><b>76.4%</b></td>
+      <td><b>80.9%</b></td>
+      <td><b>96.9%</b></td>
+      <td><b>99.0%</b></td>
+      <td><b>99.7%</b></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<div style="width:35%; margin:auto; overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; text-align:left; font-family:'Inter', sans-serif; font-size:14px;">
+  <thead>
+    <tr>
+      <th>Text Exp</th>
+      <th><b>PPL (↓)</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autoregressive</td>
+      <td>2.603</td>
+    </tr>
+    <tr>
+      <td>SEDD</td>
+      <td>&le; 3.529</td>
+    </tr>
+    <tr>
+      <td>MDLM</td>
+      <td>&le; 3.498</td>
+    </tr>
+    <tr>
+      <td>BD3-LM Block size 4</td>
+      <td>&le; 2.873</td>
+    </tr>
+    <tr>
+      <td>BD3-LM Block size 8</td>
+      <td>&le; 3.126</td>
+    </tr>
+    <tr>
+      <td><b>VMD Block size 4 (ours)</b></td>
+      <td><b>&le; 2.858</b></td>
+    </tr>
+    <tr>
+      <td><b>VMD Block size 8 (ours)</b></td>
+      <td>&le; 3.125</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            We scale up our model and evaluate it on both Sudoku and text datasets. As shown in the two tables above, on Sudoku data where tokens exhibit strong structural correlations, our model significantly outperforms the baseline. On text data, where token diversity is higher and correlations are weaker, our model still achieves slightly better performance than existing baselines, demonstrating its robustness across domains with varying dependency strength.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{zhang2025hierarchicalrectifiedflowmatching,
+      title={Hierarchical Rectified Flow Matching with Mini-Batch Couplings}, 
+      author={Yichi Zhang and Yici Yan and Alex Schwing and Zhizhen Zhao},
+      year={2025},
+      eprint={2507.13350},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.13350}, 
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer" style="font-size: 14px;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>. This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. 
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
